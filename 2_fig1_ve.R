@@ -24,6 +24,8 @@ datafile_cont_reg |>
                                fill = as.character(outcome_s)),
                  binwidth = 14)
 
+quantile(datafile_cont_reg$vaccine_d, na.rm = T)
+
 datafile_cont_group <- datafile_cont_reg |>
   mutate(group = case_when(
     vaccine_g == 0 ~ '0',
